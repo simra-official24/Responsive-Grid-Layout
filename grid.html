@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+</head>
+<style>
+    #boxes{
+        display: grid;
+        grid-template-columns: 150px 150px 150;
+        grid-template-rows: 100px 100px 100px 100px;
+        color: white;
+        gap: 5px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #box1{
+        background-color: brown;
+        grid-column: 1/4;
+        padding-top: 35px;
+    }
+
+    #box2{
+        background-color: rgb(177,135,80);
+        grid-row: 2/4;
+        padding-top: 85px;
+    }
+
+    #box3{
+        background-color:  rgb(190,146,146);
+        grid-column: 2/4;
+        padding-top: 35px;
+    }
+
+    #box4{
+        background-color: rgb(137,98,209);
+        padding-top: 35px;
+    }
+
+    #box5{
+        background-color: rgb(95,71,90);
+        padding-top: 35px;
+    }
+
+    #box6{
+        background-color:rgb(18, 65, 109);
+        grid-column: 1/4;
+        padding-top: 35px;
+    }
+
+    @media (max-width: 468px){
+        #boxes{
+        grid-template-columns: 150px;
+        grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px;
+        }
+
+        .after{
+            grid-column: 1/4;
+            padding:20px;
+        }
+   
+        #box3{
+            grid-column: 1/4;
+            padding:20px;
+        }
+        }
+</style>
+<body>
+    <div id="boxes">
+        <div id="box1" class="after">Header</div>
+        <div id="box2" class="after">Sidebar</div>
+        <div id="box3" class="after">Main</div>
+        <div id="box4" class="after">Section</div>
+        <div id="box5" class="after">Content</div>
+        <div id="box6" class="after">Footer</div>
+    </div>
+</body>
+</html>
